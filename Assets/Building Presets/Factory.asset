@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 022717562a8ce614c8e708e8889efae7, type: 3}
+  m_Name: Factory
+  m_EditorClassIdentifier: 
+  displayName: Factory
+  cost: 20
+  costPerTurn: 5
+  prefab: {fileID: 2679862500546689469, guid: 8c3c86fea17d6864390b7cfac203fb7d, type: 3}
+  population: 0
+  jobs: 10
+  food: 0
