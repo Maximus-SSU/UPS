@@ -651,7 +651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 200
-  day: 0
   curPopulation: 0
   curJobs: 0
   curFood: 0
@@ -659,6 +658,7 @@ MonoBehaviour:
   maxJobs: 0
   incomePerJob: 10
   statsText: {fileID: 1763086852}
+  gameTime: 0
 --- !u!4 &471652224
 Transform:
   m_ObjectHideFlags: 0
@@ -1042,8 +1042,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -135, y: 0}
-  m_SizeDelta: {x: 250, y: 80}
+  m_AnchoredPosition: {x: -100, y: 0}
+  m_SizeDelta: {x: 150, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136743229
 MonoBehaviour:
@@ -1091,7 +1091,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 471652223}
         m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: EndTurn
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'End Turn
+  m_text: 'Pause
 
 '
   m_isRightToLeft: 0
@@ -2028,27 +2028,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4799006817446347317, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.045
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4799006817446347317, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.045
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4799006817446347317, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.045
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4799006817446347317, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 615.035
+      value: 614.7115
       objectReference: {fileID: 0}
     - target: {fileID: 4799006817446347317, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 48.451023
+      value: 48.45102
       objectReference: {fileID: 0}
     - target: {fileID: 4799006817446347317, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 110.36876
+      value: 110.3688
       objectReference: {fileID: 0}
     - target: {fileID: 4799006817446347317, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2081,6 +2081,14 @@ PrefabInstance:
     - target: {fileID: 5401402636491058093, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
       propertyPath: m_Name
       value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348528681654243718, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348528681654243718, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3f6de334f885ae49917fc63446e7854, type: 3}
