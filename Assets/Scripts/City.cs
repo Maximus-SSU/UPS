@@ -16,6 +16,8 @@ public class City : MonoBehaviour
     public int incomePerJob;
 
     public TextMeshProUGUI statsText;
+    
+    public TextMeshProUGUI pauseIndicator;
 
     private List<BuildingPreset> buildings = new List<BuildingPreset>();
 
@@ -49,6 +51,7 @@ public class City : MonoBehaviour
     public void TogglePause() // Переключение состояния паузы
     {
         isPaused = !isPaused; // Изменение значения переменной
+        
     }
 
    void UpdateGame()
@@ -89,11 +92,11 @@ public class City : MonoBehaviour
             int seconds = (int)(gameTime % 60);
 
             // Добавляем индикатор паузы в выводимый текст
-            string pauseIndicator = isPaused ? "   [Paused]" : ""; // Показать, что игра на паузе
+            string pauseIndictr = isPaused ? "[ON]" : "[OFF]"; // Показать, что игра на паузе
 
             // Обновляем текст, включая общее время и индикатор паузы
-            statsText.text = $"Time: {hours:D2}:{minutes:D2}:{seconds:D2}   \nMoney: ${money}   \nBuildingsCost: ${TotalCost}  BuildingsIncome: ${TotalIncome-TotalCose}       Pop: {curPopulation} / {maxPopulation}   Jobs: {curJobs} / {maxJobs}   Food: {curFood}         {pauseIndicator}";
-
+            statsText.text = $"Time: {hours:D2}:{minutes:D2}:{seconds:D2}   \nMoney: ${money}   \nBuildingsCost: ${TotalCost}  BuildingsIncome: ${TotalIncome-TotalCost}       Pop: {curPopulation} / {maxPopulation}   Jobs: {curJobs} / {maxJobs}   Food: {curFood} ";
+            pauseIndicator.text=$"PAUSE: {pauseIndictr}";
             timeSinceLastUIUpdate = 0f; // Сбрасываем таймер обновления UI
         }
     }
